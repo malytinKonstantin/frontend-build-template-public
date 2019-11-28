@@ -1,4 +1,5 @@
 const isTestsEnv = process.env.NODE_ENV === 'test'
+const isDev = process.env.NODE_ENV === 'development'
 
 const babelPugins = [
   [
@@ -33,7 +34,14 @@ module.exports = {
     ['@babel/plugin-proposal-class-properties', { loose: true }],
     ['@babel/plugin-transform-classes', { loose: true }],
     '@babel/plugin-transform-arrow-functions',
-    'babel-plugin-styled-components',
+    [
+      'babel-plugin-styled-components',
+      {
+        minify: !isDev,
+        transpileTemplateLiterals: !isDev,
+        displayName: isDev,
+      },
+    ],
     [
       'babel-plugin-react-css-modules',
       {

@@ -4,6 +4,7 @@ import { Row, Col, Select as AntdSelect } from 'antd'
 import { RouteChildrenProps } from 'react-router'
 import { PageTitle, Select, Wrapper, Title, ImageWrapper } from './pokemon-styles'
 import qs from 'query-string'
+
 interface Props extends RouteChildrenProps {
   data: {
     pokemons: PokemonInfoFragment[]
