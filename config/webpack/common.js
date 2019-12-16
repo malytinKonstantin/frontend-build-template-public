@@ -15,7 +15,8 @@ const isDev = env !== "production";
 
 const config = {
   entry: [
-    "@babel/polyfill",
+    // "@babel/polyfill",
+    "regenerator-runtime/runtime",
     "abort-controller/polyfill",
     "core-js/proposals/promise-all-settled",
     "core-js/features/array/flat.js",

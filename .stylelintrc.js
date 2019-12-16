@@ -12,7 +12,7 @@
 //   },
 // }
 
-// config for css modules
+// config for styled components
 
 module.exports = {
   processors: ["stylelint-processor-styled-components"],

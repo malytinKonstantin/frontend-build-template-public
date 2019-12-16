@@ -13,11 +13,9 @@ export default class App extends Component {
         loading: () => <Spin />,
       })
 
-      const path = typeof route.path === 'string' ? route.path : route.path.join('')
-
       return (
         <Route
-          path={path}
+          path={route.path}
           exact={route.exact}
           component={asyncComponent}
           key={route.id}
