@@ -16,12 +16,14 @@ const isDev = env !== "production";
 const config = {
   entry: [
     // "@babel/polyfill",
+
     "regenerator-runtime/runtime",
     "abort-controller/polyfill",
     "core-js/proposals/promise-all-settled",
     "core-js/features/array/flat.js",
     "core-js/features/string/replace-all.js",
     "whatwg-fetch",
+
     path.join(__dirname, "..", "..", "src", "index.tsx")
   ],
 
@@ -84,6 +86,9 @@ const config = {
   ],
 
   optimization: {
+    sideEffects: false,
+    providedExports: true,
+    usedExports: true,
     splitChunks: {
       chunks: "all",
       minChunks: 2,

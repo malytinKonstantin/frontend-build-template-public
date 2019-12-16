@@ -19,9 +19,6 @@ module.exports = {
       {
         modules: isTestsEnv ? 'commonjs' : false,
         loose: true,
-        targets: {
-          browsers: ['last 2 versions', 'safari > 8', 'not ie < 11'],
-        },
       },
     ],
     '@babel/preset-react',
